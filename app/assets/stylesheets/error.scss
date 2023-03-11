@@ -1,0 +1,8 @@
+/*
+ * エラーがあるフォームに対するスタイルの指定
+ */
+.my_field_with_errors {
+    input, textarea {
+        @extend .is-invalid;
+    }
+}

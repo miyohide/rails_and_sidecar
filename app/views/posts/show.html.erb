@@ -1,0 +1,12 @@
+<% if notice.present? %>
+  <p class="alert alert-primary"><%= notice %></p>
+<% end %>
+
+<%= render @post %>
+
+<div>
+  <%= link_to "Edit this post", edit_post_path(@post), class: 'btn btn-primary' %> |
+  <%= link_to "Back to posts", posts_path, class: 'btn btn-primary' %>
+
+  <%= button_to "Destroy this post", @post, {method: :delete, class: 'btn btn-primary'} %>
+</div>

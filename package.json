@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.1.0",
+    "@hotwired/turbo-rails": "^7.1.3",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "sass": "^1.57.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint --ext js \"app/javascript/**\" && prettier \"app/javascript/**/*.js\"",
+    "lint:fix": "eslint --fix --ext js \"app/javascript/**\" && prettier --write \"app/javascript/**/*.js\"",
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.2"
+  }
+}

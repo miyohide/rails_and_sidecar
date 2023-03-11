@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: my_rails_template:0.0.1
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app:cached
+      - bundle:/app/vendor/bundle
+      - node_modules:/app/node_modules
+    environment:
+      BUNDLE_PATH: "/app/vendor/bundle"
+      BINDING: "0.0.0.0"
+    command: ["bin/dev"]
+    expose: ["3000"]
+    ports: ["3000:3000"]
+    working_dir: /app
+
+volumes:
+  bundle:
+  node_modules:
