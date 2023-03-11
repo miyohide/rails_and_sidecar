@@ -19,10 +19,11 @@ module RailsForAzureWebapps
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.logger = ActFluentLoggerRails::Logger.new(flush_immediately: true)
     # semantic_loggerの設定
     # JSON形式で出力する
-    config.rails_semantic_logger.format = :json
-    config.semantic_logger.add_appender(file_name: File.join("log", "#{Rails.env}.json"), formatter: :json)
+    # config.rails_semantic_logger.format = :json
+    # config.semantic_logger.add_appender(file_name: File.join("log", "#{Rails.env}.json"), formatter: :json)
 
     # 入力フォームのバリデーションエラーのときに挿入されるタグをカスタマイズする
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| content_tag :span, html_tag, class: "my_field_with_errors" }
