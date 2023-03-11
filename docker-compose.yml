@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    image: rails_and_sidecar:0.0.1
+    image: rails_and_sidecar:0.0.2
     stdin_open: true
     tty: true
     volumes:
@@ -16,7 +16,17 @@ services:
     command: ["bin/dev"]
     expose: ["3000"]
     ports: ["3000:3000"]
+    depends_on:
+      - fluent
     working_dir: /app
+
+  fluent:
+    image: fluent/fluent-bit
+    hostname: fluent
+    volumes:
+      - ./fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+    ports:
+      - "24224:24224"
 
 volumes:
   bundle:
