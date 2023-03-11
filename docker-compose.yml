@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    image: my_rails_template:0.0.1
+    image: rails_and_sidecar:0.0.1
     stdin_open: true
     tty: true
     volumes:
