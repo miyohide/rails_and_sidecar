@@ -1,0 +1,31 @@
+.git
+.gitignore
+
+# Ignore JetBrails IDEA's config files
+.idea
+
+# YARN doc config file
+.yardoc
+
+# node dependent files
+node_modules
+
+# ignore all logfiles and tempfiles.
+log
+tmp
+!/log/.keep
+!/tmp/.keep
+
+# Rails sqlite3 files
+db/*.sqlite3
+db/*.sqlite3-journal
+coverage
+config/master.key
+
+/.bundle
+
+# My GitHub actions files
+doc
+
+# README
+README.md
