@@ -19,7 +19,11 @@ module RailsForAzureWebapps
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    config.logger = ActFluentLoggerRails::Logger.new(flush_immediately: true)
+    config.logger = ActFluentLoggerRails::Logger.new(
+      flush_immediately: true
+    )
+    # config.lograge.enabled = true
+    # config.lograge.formatter = Lograge::Formatters::Json.new
     # semantic_loggerの設定
     # JSON形式で出力する
     # config.rails_semantic_logger.format = :json
