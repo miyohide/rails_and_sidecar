@@ -87,6 +87,7 @@ gem 'rambulance'
 gem 'cssbundling-rails', '~> 1.1'
 
 # Logger for Rails. [https://github.com/reidmorrison/rails_semantic_logger]
-gem 'rails_semantic_logger', '~> 4.11'
+# gem 'rails_semantic_logger', '~> 4.11'
+gem 'lograge'
 
 gem 'act-fluent-logger-rails'
