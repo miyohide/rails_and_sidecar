@@ -86,8 +86,8 @@ gem 'rambulance'
 # CSS Bundling for Rails. [https://github.com/rails/cssbundling-rails]
 gem 'cssbundling-rails', '~> 1.1'
 
-# Logger for Rails. [https://github.com/reidmorrison/rails_semantic_logger]
-# gem 'rails_semantic_logger', '~> 4.11'
+# Change Log format to JSON. [https://github.com/roidrage/lograge]
 gem 'lograge'
 
+# Send log data to fluent bit [https://github.com/actindi/act-fluent-logger-rails]
 gem 'act-fluent-logger-rails'
